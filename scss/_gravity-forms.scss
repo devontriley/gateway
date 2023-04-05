@@ -1,0 +1,80 @@
+body {
+    .gform_wrapper.gravity-theme {
+        .gfield input.large,
+        .gfield select.large {
+            height: 60px;
+            padding: 0 30px;
+        }
+
+        // Text, select and textarea inputs
+        input[type=color],
+        input[type=date],
+        input[type=datetime-local],
+        input[type=datetime],
+        input[type=email],
+        input[type=month],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=time],
+        input[type=url],
+        input[type=week],
+        select,
+        textarea {
+            @extend .form-control;
+        }
+
+        select {
+            @extend .form-select;
+        }
+
+        // Labels
+        .gfield_label {
+            font-weight: 400;
+            font-size: 1.125rem !important;
+        }
+
+        .gfield_header_item,
+        .gform_fileupload_rules,
+        .ginput_complex label {
+            font-size: .875rem !important;
+        }
+
+        // Checkboxes
+        .gchoice {
+            @extend .form-check;
+
+            .gfield-choice-input {
+                @extend .form-check-input;
+            }
+
+            label {
+                @extend .form-check-label;
+                vertical-align: inherit; /* Removes v-align middle from gravity forms which messes up alignment */
+            }
+        }
+
+        // Submit button
+        .gform_footer button,
+        .gform_footer input,
+        .gform_page_footer button,
+        .gform_page_footer input {
+            @extend .btn;
+            @extend .btn-primary;
+        }
+
+        // Field row left field
+        .ginput_complex:not(.ginput_container_address) fieldset:not([style*="display:none"]):not(.ginput_full),
+        .ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full) {
+            padding-right: 5px;
+        }
+
+        // Field row right field
+        .ginput_complex:not(.ginput_container_address) fieldset:not([style*="display:none"]):not(.ginput_full)~span:not(.ginput_full),
+        .ginput_complex:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full)~span:not(.ginput_full) {
+            padding-left: 5px;
+        }
+    }
+}

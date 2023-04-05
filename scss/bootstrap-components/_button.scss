@@ -1,0 +1,18 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.btn {
+    &.btn-primary {
+        --bs-btn-bg: var(--bs-primary) !important;
+        --bs-btn-border-color: var(--bs-primary) !important;
+
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+    }
+
+    &.btn-secondary {
+        --bs-btn-bg: var(--bs-secondary);
+        --bs-btn-border-color: var(--bs-secondary);
+    }
+}
