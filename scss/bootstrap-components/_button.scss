@@ -4,15 +4,16 @@
 
 .btn {
     &.btn-primary {
-        --bs-btn-bg: var(--bs-primary) !important;
-        --bs-btn-border-color: var(--bs-primary) !important;
-
-        background-color: var(--bs-primary);
-        border-color: var(--bs-primary);
+        --bs-btn-bg: var(--bs-primary);
+        --bs-btn-hover-bg: var(--bs-primary-shade);
+        --bs-btn-border-color: var(--bs-primary);
+        --bs-btn-hover-border-color: var(--bs-primary-shade);
     }
 
     &.btn-secondary {
         --bs-btn-bg: var(--bs-secondary);
+        --bs-btn-hover-bg: var(--bs-secondary-shade);
         --bs-btn-border-color: var(--bs-secondary);
+        --bs-btn-hover-border-color: var(--bs-secondary-shade);
     }
 }
