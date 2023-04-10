@@ -12,6 +12,12 @@ Version:      1.0.0
   --bs-secondary: #26438C;
   --bs-secondary-shade: #213A78;
   --bs-secondary-tint: #3155B1;
+  --bs-tertiary-1: #F4CB3E;
+  --bs-tertiary-1-shade: #F1BE15;
+  --bs-tertiary-1-tint: #F5D15A;
+  --bs-tertiary-2: #1A9CFC;
+  --bs-tertiary-2-shade: #048CED;
+  --bs-tertiary-2-tint: #3DADFC;
 }
 
 .btn.btn-primary, body .gform_wrapper.gravity-theme .gform_footer button,
