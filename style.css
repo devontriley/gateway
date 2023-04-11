@@ -20,6 +20,12 @@ Version:      1.0.0
   --bs-tertiary-2-tint: #3DADFC;
 }
 
+.btn, body .gform_wrapper.gravity-theme .gform_footer button,
+body .gform_wrapper.gravity-theme .gform_footer input,
+body .gform_wrapper.gravity-theme .gform_page_footer button,
+body .gform_wrapper.gravity-theme .gform_page_footer input {
+  --bs-btn-border-radius: 100px;
+}
 .btn.btn-primary, body .gform_wrapper.gravity-theme .gform_footer button,
 body .gform_wrapper.gravity-theme .gform_footer input,
 body .gform_wrapper.gravity-theme .gform_page_footer button,

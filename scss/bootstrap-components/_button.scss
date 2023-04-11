@@ -3,6 +3,8 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .btn {
+    --bs-btn-border-radius: 100px;
+
     &.btn-primary {
         --bs-btn-bg: var(--bs-primary);
         --bs-btn-hover-bg: var(--bs-primary-shade);
