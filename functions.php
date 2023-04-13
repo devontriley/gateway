@@ -1,5 +1,18 @@
 <?php
 
+// Enable GA4 tracking
+function enableGA4() { ?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLX3XSGZ9W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SLX3XSGZ9W');
+    </script>
+<?php }
+add_action( 'wp_head', 'enableGA4' );
+
 // Enable Bughed on development
 if ( wp_get_environment_type() !== 'production' ) {
     function load_bugherd() { ?>
