@@ -11,7 +11,7 @@ function enableGA4() { ?>
         gtag('config', 'G-SLX3XSGZ9W');
     </script>
 <?php }
-add_action( 'wp_head', 'enableGA4' );
+add_action( 'wp_head', 'enableGA4', -100 );
 
 // Enable Bughed on development
 if ( wp_get_environment_type() !== 'production' ) {
