@@ -26,3 +26,16 @@ function gateway_enqueue_styles() {
     wp_enqueue_style( 'gateway-style', get_stylesheet_uri(), array( 'heretic-style' ), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'gateway_enqueue_styles' );
+
+// Register scripts
+if (!function_exists('gateway_scripts')) :
+    function gateway_scripts() {
+        $postType = get_post_type();
+
+        // Gateway theme scripts
+        wp_enqueue_script( 'gateway-script', get_site_url().'/wp-content/themes/gateway/main.js', array('jquery'), '1.0', true );
+    }
+endif;
+add_action( 'wp_enqueue_scripts', 'gateway_scripts' );
+
+include( 'inc/woocommerce.php' );
