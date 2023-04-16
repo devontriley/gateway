@@ -19,6 +19,7 @@ Version:      1.0.0
   --bs-tertiary-2-shade: #048CED;
   --bs-tertiary-2-tint: #3DADFC;
   --eyebrow-color: var(--bs-tertiary-2);
+  --rte-fifty-fifty-bg-color: #F2F3F4;
 }
 
 .btn, body .gform_wrapper.gravity-theme .gform_footer button,
