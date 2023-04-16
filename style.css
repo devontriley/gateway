@@ -21,6 +21,8 @@ Version:      1.0.0
   --borderRadius: 20px;
   --eyebrow-color: var(--bs-tertiary-2);
   --rte-fifty-fifty-bg-color: #F2F3F4;
+  --hero-carousel-bg-light: #F2F3F4;
+  --hero-carousel-bg-dark: #0B1429;
 }
 
 .btn, body .gform_wrapper.gravity-theme .gform_footer button,
