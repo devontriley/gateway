@@ -1,8 +1,9 @@
 <?php
 
 /*
- * Send gtag GA4 "add_to_cart" event when product is added to cart from PDP
+ * Create product array for gtag event
  */
+
 function create_gtag_product( $cartTotal, $products ) {
     return array(
         'currency' => 'USD',
@@ -11,9 +12,11 @@ function create_gtag_product( $cartTotal, $products ) {
     );
 }
 
-function custom_add_to_cart() {
-    global $woocommerce;
+/*
+ * Send gtag GA4 "add_to_cart" event when product is added to cart from PDP
+ */
 
+function custom_add_to_cart() {
     $cartProducts = array();
 
     // Loop over $cart items
@@ -57,29 +60,51 @@ add_action('woocommerce_add_to_cart', 'custom_add_to_cart');
  * Send gtag GA4 "purchase" event on successful purchase
  * Documentation: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtag#make_a_purchase_or_issue_a_refund
  */
-function create_gtag_order( $order ) {
-    return array(
-        'transaction_id' => "T_12345",
-        'value' => 25.42,
-        'tax' => 4.90,
-        'shipping' => 5.99,
-        'currency' => "USD",
-        'coupon' => "SUMMER_SALE",
-        'items' => array()
+function create_gtag_order( $order_id ) {
+    $order = wc_get_order( $order_id );
+    $total = $order->get_total();
+    $currency = get_woocommerce_currency();
+    $discountTotal = $order->get_discount_total();
+    $shippingTotal = $order->get_shipping_total();
+    $taxTotal = $order->get_total_tax();
+    $coupons = $order->get_coupon_codes();
+    $items = $order->get_items();
+
+    $data = array(
+        'transaction_id' => $order_id,
+        'value' => floatval( $total ),
+        'tax' => floatval( $taxTotal ),
+        'shipping' => floatval( $shippingTotal ),
+        'currency' => $currency
     );
+
+    if ( $coupons ) {
+//        $data['coupon'] = implode( ',', $coupons );
+    }
+
+    if ( $items ) {
+        $ga4Items = array_map(function($item) {
+            return array(
+                'item_id' => "SKU_12345",
+                'item_name' => "Stan and Friends Tee",
+                'coupon' => '',
+                'discount' => '',
+                'item_category' => "Apparel",
+                'price' => 9.99,
+                'quantity' => 1
+            );
+        }, $items);
+
+//        $data['items'] = $ga4Items;
+    }
+
+    return $data;
 }
 
 function gateway_payment_complete( $order_id ){
-    $order = wc_get_order( $order_id );
-
-    $gtag_order = create_gtag_order( $order );
-    ?>
-
-    <script type="text/javascript">
-        window.addEventListener( 'load', function() {
-            gtag("event", "purchase", <?php echo json_encode( $gtag_order ); ?> );
-            console.log('gtag purchase fired')
-        })
-    </script>
+    $gtag_order = create_gtag_order( $order_id ); ?>
+        <script type="text/javascript">
+            console.log(JSON.parse('<?php echo json_encode( $gtag_order ); ?>'));
+        </script>
 <?php }
-add_action( 'woocommerce_payment_complete', 'so_payment_complete' );
+add_action( 'woocommerce_thankyou', 'gateway_payment_complete' );
