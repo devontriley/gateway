@@ -29,26 +29,34 @@ Version:      1.0.0
 .btn, body .gform_wrapper.gravity-theme .gform_footer button,
 body .gform_wrapper.gravity-theme .gform_footer input,
 body .gform_wrapper.gravity-theme .gform_page_footer button,
-body .gform_wrapper.gravity-theme .gform_page_footer input {
+body .gform_wrapper.gravity-theme .gform_page_footer input,
+.woocommerce button.btn,
+.woocommerce-page button.btn {
   --bs-btn-border-radius: 100px;
 }
 .btn.btn-primary, body .gform_wrapper.gravity-theme .gform_footer button,
 body .gform_wrapper.gravity-theme .gform_footer input,
 body .gform_wrapper.gravity-theme .gform_page_footer button,
-body .gform_wrapper.gravity-theme .gform_page_footer input {
+body .gform_wrapper.gravity-theme .gform_page_footer input,
+.woocommerce button.btn.btn-primary,
+.woocommerce-page button.btn.btn-primary {
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-hover-bg: var(--bs-primary-shade);
   --bs-btn-border-color: var(--bs-primary);
   --bs-btn-hover-border-color: var(--bs-primary-shade);
+  --bs-btn-border-radius: 100px;
 }
 .btn.btn-secondary, body .gform_wrapper.gravity-theme .gform_footer button.btn-secondary,
 body .gform_wrapper.gravity-theme .gform_footer input.btn-secondary,
 body .gform_wrapper.gravity-theme .gform_page_footer button.btn-secondary,
-body .gform_wrapper.gravity-theme .gform_page_footer input.btn-secondary {
+body .gform_wrapper.gravity-theme .gform_page_footer input.btn-secondary,
+.woocommerce button.btn.btn-secondary,
+.woocommerce-page button.btn.btn-secondary {
   --bs-btn-bg: var(--bs-secondary);
   --bs-btn-hover-bg: var(--bs-secondary-shade);
   --bs-btn-border-color: var(--bs-secondary);
   --bs-btn-hover-border-color: var(--bs-secondary-shade);
+  --bs-btn-border-radius: 100px;
 }
 
 .card {

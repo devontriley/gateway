@@ -2,7 +2,9 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-.btn {
+.btn,
+.woocommerce button.btn,
+.woocommerce-page button.btn {
     --bs-btn-border-radius: 100px;
 
     &.btn-primary {
@@ -10,6 +12,7 @@
         --bs-btn-hover-bg: var(--bs-primary-shade);
         --bs-btn-border-color: var(--bs-primary);
         --bs-btn-hover-border-color: var(--bs-primary-shade);
+        --bs-btn-border-radius: 100px;
     }
 
     &.btn-secondary {
@@ -17,5 +20,6 @@
         --bs-btn-hover-bg: var(--bs-secondary-shade);
         --bs-btn-border-color: var(--bs-secondary);
         --bs-btn-hover-border-color: var(--bs-secondary-shade);
+        --bs-btn-border-radius: 100px;
     }
 }
