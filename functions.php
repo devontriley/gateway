@@ -22,6 +22,17 @@ if ( wp_get_environment_type() !== 'production' ) {
     add_action( 'wp_head', 'load_bugherd' );
 }
 
+// Register admin styles and scripts
+function gateway_enqueue_admin_script( $hook ) {
+    global $pagenow;
+
+    if( $pagenow === 'post.php' ) {
+        // Gateway theme styles
+        wp_enqueue_style( 'gateway-style', get_stylesheet_uri(), array( 'heretic-style', 'bootstrap' ), time() );
+    }
+}
+add_action( 'admin_enqueue_scripts', 'gateway_enqueue_admin_script' );
+
 function gateway_enqueue_styles() {
     wp_enqueue_style( 'gateway-style', get_stylesheet_uri(), array( 'heretic-style' ), wp_get_theme()->get( 'Version' ) );
 }
