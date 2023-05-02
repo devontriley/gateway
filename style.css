@@ -20,6 +20,8 @@ Version:      1.0.0
   --bs-tertiary-2-tint: #3DADFC;
   --borderRadius: 20px;
   --eyebrow-color: var(--bs-tertiary-2);
+  --link-color: var(--bs-primary);
+  --link-hover-color: var(--bs-primary-shade);
   --notification-bar-bg: var(--bs-secondary);
   --rte-fifty-fifty-bg-color: #F2F3F4;
   --hero-carousel-bg-light: #F2F3F4;
