@@ -1,0 +1,28 @@
+.primary-footer {
+    background-color: var(--bs-gray-200);
+
+    .footer-top {
+        border-top: none;
+        border-bottom-color: var(--bs-gray-400);
+    }
+
+    a {
+        &:hover {
+            color: var(--bs-primary);
+        }
+    }
+}
+
+.footer-bottom {
+    .social-links {
+        a {
+            &:hover {
+                background: var(--bs-primary);
+
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

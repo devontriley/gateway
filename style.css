@@ -65,3 +65,38 @@ body .gform_wrapper.gravity-theme .gform_page_footer input.btn-secondary,
 .card {
   --bs-card-border-radius: var(--borderRadius);
 }
+
+.primary-header {
+  height: 120px;
+}
+
+/* Logo */
+.primary-header .logo img {
+  height: auto !important;
+  width: auto !important;
+  max-height: 105px !important;
+  max-width: 120px !important;
+}
+@media (min-width: 1200px) {
+  .primary-header .logo img {
+    max-width: 180px !important;
+  }
+}
+
+.primary-footer {
+  background-color: var(--bs-gray-200);
+}
+.primary-footer .footer-top {
+  border-top: none;
+  border-bottom-color: var(--bs-gray-400);
+}
+.primary-footer a:hover {
+  color: var(--bs-primary);
+}
+
+.footer-bottom .social-links a:hover {
+  background: var(--bs-primary);
+}
+.footer-bottom .social-links a:hover i {
+  color: #fff;
+}
