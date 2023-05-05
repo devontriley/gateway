@@ -20,8 +20,8 @@ Version:      1.0.0
   --bs-tertiary-2-tint: #3DADFC;
   --borderRadius: 20px;
   --eyebrow-color: var(--bs-tertiary-2);
-  --link-color: var(--bs-primary);
-  --link-hover-color: var(--bs-primary-shade);
+  --link-color: var(--bs-secondary);
+  --link-hover-color: var(--bs-tertiary-2);
   --notification-bar-bg: var(--bs-secondary);
   --rte-fifty-fifty-bg-color: #F2F3F4;
   --hero-carousel-bg-light: #F2F3F4;
@@ -66,6 +66,14 @@ body .gform_wrapper.gravity-theme .gform_page_footer input.btn-secondary,
   --bs-card-border-radius: var(--borderRadius);
 }
 
+a {
+  color: var(--bs-body-color);
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
 .primary-header {
   height: 120px;
 }
@@ -81,6 +89,23 @@ body .gform_wrapper.gravity-theme .gform_page_footer input.btn-secondary,
   .primary-header .logo img {
     max-width: 180px !important;
   }
+}
+
+:not(.nav-drawer) > .primary-nav.menu-top > li:hover {
+  color: var(--link-hover-color);
+}
+
+.primary-nav-container .sub-menu li a {
+  padding: 7px 40px 7px 20px;
+}
+.primary-nav-container .sub-menu li a .sub-menu-icon {
+  display: none;
+}
+.primary-nav-container .sub-menu li a:hover:before {
+  background: var(--link-hover-color);
+}
+.primary-nav-container .sub-menu li a:hover .bi-arrow-right {
+  fill: var(--link-hover-color);
 }
 
 .primary-footer {
