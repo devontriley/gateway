@@ -1,5 +1,5 @@
 .primary-footer {
-    background-color: var(--bs-tertiary-2);
+    background-color: var(--bs-secondary);
     color: #fff;
 
     .footer-top {
@@ -11,7 +11,7 @@
         color: #fff;
 
         &:hover {
-            color: var(--bs-secondary);
+            color: var(--bs-tertiary-1);
         }
     }
 }
