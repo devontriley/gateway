@@ -1,14 +1,17 @@
 .primary-footer {
-    background-color: var(--bs-gray-200);
+    background-color: var(--bs-tertiary-2);
+    color: #fff;
 
     .footer-top {
         border-top: none;
-        border-bottom-color: var(--bs-gray-400);
+        border-bottom-color: $white;
     }
 
     a {
+        color: #fff;
+
         &:hover {
-            color: var(--bs-primary);
+            color: var(--bs-secondary);
         }
     }
 }
@@ -17,7 +20,7 @@
     .social-links {
         a {
             &:hover {
-                background: var(--bs-primary);
+                background: var(--bs-secondary);
 
                 i {
                     color: $white;

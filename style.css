@@ -84,18 +84,22 @@ body .gform_wrapper.gravity-theme .gform_page_footer input.btn-secondary,
 }
 
 .primary-footer {
-  background-color: var(--bs-gray-200);
+  background-color: var(--bs-tertiary-2);
+  color: #fff;
 }
 .primary-footer .footer-top {
   border-top: none;
-  border-bottom-color: var(--bs-gray-400);
+  border-bottom-color: #fff;
+}
+.primary-footer a {
+  color: #fff;
 }
 .primary-footer a:hover {
-  color: var(--bs-primary);
+  color: var(--bs-secondary);
 }
 
 .footer-bottom .social-links a:hover {
-  background: var(--bs-primary);
+  background: var(--bs-secondary);
 }
 .footer-bottom .social-links a:hover i {
   color: #fff;
