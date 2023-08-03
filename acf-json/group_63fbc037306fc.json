@@ -1,0 +1,822 @@
+{
+    "key": "group_63fbc037306fc",
+    "title": "Grid",
+    "fields": [
+        {
+            "key": "field_63fbc0377f589",
+            "label": "Format",
+            "name": "format",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "choices": {
+                "Icon and Blurb": "Icon and Blurb",
+                "Info Boxes": "Info Boxes",
+                "Articles": "Articles",
+                "Pages": "Pages",
+                "Team Members": "Team Members",
+                "Artist Profiles": "Artist Profiles",
+                "Product Categories": "Product Categories",
+                "Products": "Products",
+                "External Links": "External Links",
+                "Logos": "Logos"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_63fcc7a4850eb",
+            "label": "Team Members",
+            "name": "team_members",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Team Members"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "team-members"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "save_custom": 0,
+            "save_post_status": "publish",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_null": 0,
+            "ui": 1,
+            "save_post_type": ""
+        },
+        {
+            "key": "field_63fe414ec4507",
+            "label": "Products",
+            "name": "products",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Products"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "save_custom": 0,
+            "save_post_status": "publish",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_null": 0,
+            "ui": 1,
+            "save_post_type": ""
+        },
+        {
+            "key": "field_63fbc3dc7f597",
+            "label": "Columns",
+            "name": "columns",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Select the number of columns for desktop displays. Mobile devices and tablets implement specific column amounts that override this setting.\r\n\r\nSelecting four columns for the \"Info Boxes\" format will result in three columns. Selecting three columns for the \"Team Members\" format will result in four columns.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Articles"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Product Categories"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Products"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "External Links"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Logos"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Pages"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "choices": {
+                "Four": "Four",
+                "Three": "Three",
+                "Two": "Two"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_63fbc6452d441",
+            "label": "Image as Icon",
+            "name": "image_as_icon",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Selecting this will cause the image to act like an icon and no longer fill the upper portion of the card and instead will be centered and contained.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Info Boxes"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Team Members"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_63fbc10c7f58a",
+            "label": "Header",
+            "name": "header",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63fbc1117f58b",
+            "label": "Header Size",
+            "name": "header_size",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "choices": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_640e84e00c468",
+            "label": "Center Header",
+            "name": "center_header",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Articles"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Info Boxes"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Pages"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Team Members"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "External Links"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Logos"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6452dfe4b022f",
+            "label": "Body Copy",
+            "name": "body_copy",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Icon and Blurb"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Artist Profiles"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Product Categories"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Products"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_64525fdc82e9e",
+            "label": "Teal Card Background",
+            "name": "teal_card_background",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Info Boxes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_63fbc3837f596",
+            "label": "Cards",
+            "name": "cards",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Articles"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Team Members"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Artist Profiles"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Product Categories"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Products"
+                    },
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "!=",
+                        "value": "Pages"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "acfe_repeater_stylised_button": 0,
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63fbc5992d43a",
+                    "label": "Card Header",
+                    "name": "card_header",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63fbc0377f589",
+                                "operator": "!=",
+                                "value": "Logos"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63fbc3837f596"
+                },
+                {
+                    "key": "field_63fbc5a22d43b",
+                    "label": "Card Body",
+                    "name": "card_body",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63fbc0377f589",
+                                "operator": "!=",
+                                "value": "Logos"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_save_meta": 0,
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 1,
+                    "parent_repeater": "field_63fbc3837f596"
+                },
+                {
+                    "key": "field_63fbc60c2d440",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63fbc6452d441",
+                                "operator": "!=",
+                                "value": "No Image"
+                            },
+                            {
+                                "field": "field_63fbc0377f589",
+                                "operator": "!=",
+                                "value": "External Links"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "return_format": "array",
+                    "acfe_thumbnail": 0,
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_63fbc3837f596"
+                },
+                {
+                    "key": "field_63fbc5b02d43c",
+                    "label": "Text Link",
+                    "name": "text_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63fbc0377f589",
+                                "operator": "==",
+                                "value": "Icon and Blurb"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_63fbc0377f589",
+                                "operator": "==",
+                                "value": "Info Boxes"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_63fbc0377f589",
+                                "operator": "==",
+                                "value": "External Links"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_63fbc3837f596"
+                }
+            ]
+        },
+        {
+            "key": "field_640e8382477c7",
+            "label": "Show Articles Button",
+            "name": "show_articles_button",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Articles"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_640e8397477c8",
+            "label": "Article Count",
+            "name": "article_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Choose how many articles to display",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Articles"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64358a6e36491",
+            "label": "Product Categories",
+            "name": "product_categories",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Product Categories"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Term",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_64358f928014f",
+                    "label": "Term",
+                    "name": "term",
+                    "aria-label": "",
+                    "type": "acfe_taxonomy_terms",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_save_meta": 0,
+                    "taxonomy": [
+                        "product_cat"
+                    ],
+                    "allow_terms": "",
+                    "allow_level": "",
+                    "field_type": "select",
+                    "default_value": [],
+                    "return_format": "object",
+                    "ui": 0,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "choices": [],
+                    "ajax": 0,
+                    "placeholder": "",
+                    "search_placeholder": "",
+                    "layout": "",
+                    "toggle": 0,
+                    "allow_custom": 0,
+                    "other_choice": 0,
+                    "parent_repeater": "field_64358a6e36491"
+                }
+            ]
+        },
+        {
+            "key": "field_6442cdded67fb",
+            "label": "Artists",
+            "name": "artists",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Artist Profiles"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "post_type": [
+                "artists"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "save_custom": 0,
+            "save_post_status": "publish",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_null": 0,
+            "ui": 1,
+            "save_post_type": ""
+        },
+        {
+            "key": "field_6442cf42e6f30",
+            "label": "Pages",
+            "name": "pages",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fbc0377f589",
+                        "operator": "==",
+                        "value": "Pages"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "post_type": [
+                "page"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "save_custom": 0,
+            "save_post_status": "publish",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_null": 0,
+            "ui": 1,
+            "save_post_type": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 18,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1691088705
+}
