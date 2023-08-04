@@ -13,6 +13,6 @@ if (!function_exists('gateway_scripts')) :
         wp_enqueue_script( 'gateway-script', get_site_url().'/wp-content/themes/gateway/main.js', array('jquery'), filemtime(get_stylesheet_directory() . '/main.js'), true );
     }
 endif;
-add_action( 'wp_enqueue_scripts', 'gateway_scripts' );
+//add_action( 'wp_enqueue_scripts', 'gateway_scripts' );
 
 include( 'inc/woocommerce.php' );
