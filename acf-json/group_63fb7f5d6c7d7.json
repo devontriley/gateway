@@ -416,6 +416,41 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_64cc02f825296",
+            "label": "Image\/Video Description",
+            "name": "image_video_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fb7f5dd4101",
+                        "operator": "==",
+                        "value": "Medium"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fb7f5dd4101",
+                        "operator": "==",
+                        "value": "Small"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_63fb817ad410a",
             "label": "Button",
             "name": "button",
@@ -459,5 +494,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691088701
+    "modified": 1691091733
 }

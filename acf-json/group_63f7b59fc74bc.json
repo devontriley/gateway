@@ -473,6 +473,35 @@
                     "preview_size": "thumbnail",
                     "library": "all",
                     "parent_repeater": "field_63f7feaee77d8"
+                },
+                {
+                    "key": "field_64cc022ea3584",
+                    "label": "Image\/Video Description",
+                    "name": "image_video_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63f7bfdfcd607",
+                                "operator": "==",
+                                "value": "Primary"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_63f7feaee77d8"
                 }
             ]
         },
@@ -556,5 +585,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691088699
+    "modified": 1691091610
 }
