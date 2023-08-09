@@ -767,7 +767,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "artists"
             }
         ]
     ],
@@ -780,5 +780,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691088675
+    "modified": 1691584235
 }
